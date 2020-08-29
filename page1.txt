@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Collateral Optimization</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Collateral Optimization</h1>
+
+     <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('predict')}}"method="POST">
+
+      <input type="number" name="Loan1" placeholder="Loan 1" required="required" />
+    	<input type="number" name="RWA1" placeholder="RWA 1" required="required" />
+        <input type="number" name="CCF1" placeholder="CCF 1" required="required" /><br>
+      <input type="number" name="Exposure 2" placeholder="Loan 2" required="required" />
+    	<input type="number" name="RWA2" placeholder="RWA 2" required="required" />
+        <input type="number" name="CCF1" placeholder="CCF 2" required="required" /><br>
+      <input type="number" name="Loan3" placeholder="Loan 3" required="required" />
+    	<input type="number" name="RWA3" placeholder="RWA 3" required="required" />
+        <input type="number" name="CCF3" placeholder="CCF 3" required="required" /><br>
+
+     <input type="number" name="Collateral1" placeholder="Collateral 1" required="required" /><br>
+    	<input type="number" name="Collateral2" placeholder="Collateral 2" required="required" />
+        
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">OPTIMIZE</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{pred}}
+
+</body>
+</html>
